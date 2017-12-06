@@ -1,6 +1,6 @@
 {
   "name": "gulp-html-lqip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "types": "./index.d.ts",
   "repository": "git@github.com:maistho/gulp-html-lqip.git",
@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.6",
-    "typescript": "^2.6.2",
-    "gulp-html-transform": "^1.0.0"
+    "gulp-html-transform": "^1.0.0",
+    "typescript": "^2.6.2"
   },
   "peerDependencies": {
     "gulp-html-transform": "^1.0.0"
