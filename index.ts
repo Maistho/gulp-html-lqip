@@ -37,7 +37,6 @@ export const lqip = (options: Options): Transformer => {
 
     for (const $el of elements) {
       const filepath = path.join(options.base, $el.attr('src'))
-      console.log(filepath)
 
       const p = Promise.all([
         base64(filepath),
