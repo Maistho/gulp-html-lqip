@@ -63,7 +63,6 @@ exports.lqip = function (options) {
                     elements = $(options.query).toArray().map(function (el) { return $(el); });
                     _loop_1 = function ($el) {
                         var filepath = path.join(options.base, $el.attr('src'));
-                        console.log(filepath);
                         var p = Promise.all([
                             base64(filepath),
                             sizeOf(filepath),
