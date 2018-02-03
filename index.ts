@@ -42,11 +42,13 @@ export const lqip = (options: Options): Transformer => {
         base64(filepath),
         sizeOf(filepath),
       ]).then(([res, dimensions]) => {
-        const wrapper = $('<div class="lqip blur" />');
+        const wrapper = $('<div />');
         wrapper.css('padding-top', ((dimensions.height / dimensions.width) * 100).toFixed(4) + '%')
         wrapper.css('background-image', `url(${res})`)
+        wrapper.attr('class', `lqip blur ${$el.attr('class')}`)
         const clone = $el.clone();
-        clone.attr('onload', 'this.parentElement.className=\'lqip\'')
+        clone.attr('onload', 'this.parentElement.classList.remove(\'blur\')')
+        clone.attr('class', '')
         wrapper.append(clone)
         $el.replaceWith(wrapper)
       }, () => {})

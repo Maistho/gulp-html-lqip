@@ -68,11 +68,13 @@ exports.lqip = function (options) {
                             sizeOf(filepath),
                         ]).then(function (_a) {
                             var res = _a[0], dimensions = _a[1];
-                            var wrapper = $('<div class="lqip blur" />');
+                            var wrapper = $('<div />');
                             wrapper.css('padding-top', ((dimensions.height / dimensions.width) * 100).toFixed(4) + '%');
                             wrapper.css('background-image', "url(" + res + ")");
+                            wrapper.attr('class', "lqip blur " + $el.attr('class'));
                             var clone = $el.clone();
-                            clone.attr('onload', 'this.parentElement.className=\'lqip\'');
+                            clone.attr('onload', 'this.parentElement.classList.remove(\'blur\')');
+                            clone.attr('class', '');
                             wrapper.append(clone);
                             $el.replaceWith(wrapper);
                         }, function () { });
