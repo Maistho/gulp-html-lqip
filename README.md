@@ -1,3 +1,6 @@
+## DEPRECATED: All plugins have been moved into the main repository.
+See [gulp-html-transform](https://github.com/maistho/gulp-html-transform) for usage
+
 # gulp-html-lqip
 This is a plugin for [gulp-html-transform](https://github.com/maistho/gulp-html-transform)
 
